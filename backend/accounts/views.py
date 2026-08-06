@@ -67,3 +67,9 @@ from django.contrib.auth import logout
 def logout_view(request):
     logout(request)
     return redirect("/login/")
+
+from .models import Project
+
+def project_list(request):
+    projects = Project.objects.all()
+    return render(request, "projects.html", {"projects": projects})
