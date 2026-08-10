@@ -1,4 +1,6 @@
+from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+
 from .views import (
     BannerViewSet,
     VisionMissionViewSet,
@@ -6,11 +8,15 @@ from .views import (
     InitiativeViewSet,
 )
 
+
 router = DefaultRouter()
 
-router.register('banners', BannerViewSet, basename='banner')
-router.register('vision-mission', VisionMissionViewSet, basename='vision-mission')
-router.register('statistics', StatisticViewSet, basename='statistic')
-router.register('initiatives', InitiativeViewSet, basename='initiative')
+router.register(r'banners', BannerViewSet)
+router.register(r'vision-mission', VisionMissionViewSet)
+router.register(r'statistics', StatisticViewSet)
+router.register(r'initiatives', InitiativeViewSet)
 
-urlpatterns = router.urls
+
+urlpatterns = [
+    path('', include(router.urls)),
+]

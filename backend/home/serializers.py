@@ -1,5 +1,11 @@
 from rest_framework import serializers
-from .models import Banner, VisionMission, Statistic, Initiative
+
+from .models import (
+    Banner,
+    VisionMission,
+    Statistic,
+    Initiative,
+)
 
 
 class BannerSerializer(serializers.ModelSerializer):

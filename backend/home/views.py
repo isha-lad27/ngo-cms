@@ -1,5 +1,12 @@
 from rest_framework import viewsets
-from .models import Banner, VisionMission, Statistic, Initiative
+
+from .models import (
+    Banner,
+    VisionMission,
+    Statistic,
+    Initiative,
+)
+
 from .serializers import (
     BannerSerializer,
     VisionMissionSerializer,

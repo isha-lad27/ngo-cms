@@ -82,3 +82,11 @@ class NGO(models.Model):
 
     def __str__(self):
         return self.name
+
+class HomeContent(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
