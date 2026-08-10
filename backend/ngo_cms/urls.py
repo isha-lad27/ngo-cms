@@ -1,7 +1,8 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.http import HttpResponse
+from django.urls import path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('home.urls')),
+    path("admin/", admin.site.urls),
+    path("", lambda request: HttpResponse("NGO CMS is running!")),
 ]
