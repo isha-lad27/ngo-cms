@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: ngo-cms
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn --chdir backend ngo_cms.wsgi:application"
+    plan: free
