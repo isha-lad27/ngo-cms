@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://127.0.0.1:8000/api";
+const API_BASE_URL = "https://ngo-cms-fsbh.onrender.com/api";
 
 // Load Banners
 async function loadBanners() {
@@ -9,18 +9,22 @@ async function loadBanners() {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const banners = await response.json();
+        const data = await response.json();
 
-        console.log("Banners:", banners);
+        console.log("Banners API response:", data);
 
         const container = document.getElementById("banner-container");
 
-        // This page does not have a banner container
         if (!container) {
             return;
         }
 
-        if (!banners || banners.length === 0) {
+        // Support both normal DRF response and paginated DRF response
+        const banners = Array.isArray(data)
+            ? data
+            : (data.results || []);
+
+        if (banners.length === 0) {
             container.innerHTML = `
                 <div class="col-12 text-center">
                     <p>No banners available.</p>
@@ -31,23 +35,32 @@ async function loadBanners() {
 
         const banner = banners[0];
 
+        // Support image_url or image field
+        let imageUrl = banner.image_url || banner.image || "";
+
+        // If Django returns a relative image path, attach backend URL
+        if (imageUrl && imageUrl.startsWith("/")) {
+            imageUrl = API_BASE_URL.replace("/api", "") + imageUrl;
+        }
+
         container.innerHTML = `
             <div class="col-md-6 text-center">
                 <img
-                    src="${banner.image_url}"
-                    alt="${banner.title}"
+                    src="${imageUrl}"
+                    alt="${banner.title || "NGO Banner"}"
                     class="img-fluid rounded shadow"
                     style="max-height: 400px; width: 100%; object-fit: cover;"
+                    onerror="this.style.display='none';"
                 >
             </div>
 
             <div class="col-md-6 text-center text-md-start mt-4 mt-md-0">
                 <h1 class="display-5 fw-bold">
-                    ${banner.title}
+                    ${banner.title || ""}
                 </h1>
 
                 <p class="lead">
-                    ${banner.description}
+                    ${banner.description || ""}
                 </p>
 
                 <a href="donate.html" class="btn btn-success">
@@ -65,6 +78,7 @@ async function loadBanners() {
             container.innerHTML = `
                 <div class="col-12 text-center">
                     <p>Unable to load banner.</p>
+                    <small>${error.message}</small>
                 </div>
             `;
         }
