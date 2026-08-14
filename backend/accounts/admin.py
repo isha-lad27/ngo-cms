@@ -28,10 +28,43 @@ class BeneficiaryAdmin(admin.ModelAdmin):
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ("project_name", "budget", "start_date", "end_date")
-    search_fields = ("project_name",)
-    list_filter = ("start_date",)
+    list_display = (
+        "project_name",
+        "status",
+        "location",
+        "start_date",
+        "end_date",
+        "budget",
+    )
 
+    search_fields = (
+        "project_name",
+        "description",
+        "location",
+    )
+
+    list_filter = (
+        "status",
+        "start_date",
+        "end_date",
+    )
+
+    ordering = ("-start_date",)
+
+@admin.register(ProjectImage)
+class ProjectImageAdmin(admin.ModelAdmin):
+    list_display = (
+        "project",
+        "uploaded_at",
+    )
+
+    list_filter = (
+        "uploaded_at",
+    )
+
+    search_fields = (
+        "project__project_name",
+    )
 
 @admin.register(Volunteer)
 class VolunteerAdmin(admin.ModelAdmin):

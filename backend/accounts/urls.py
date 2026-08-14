@@ -10,4 +10,3 @@ urlpatterns = [
     path("projects/", views.project_list, name="projects"),
 ]
 
-   
