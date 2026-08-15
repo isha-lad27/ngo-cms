@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-
+from django.http import JsonResponse
 
 def register(request):
     if request.method == "POST":
@@ -73,3 +73,21 @@ from .models import Project
 def project_list(request):
     projects = Project.objects.all()
     return render(request, "projects.html", {"projects": projects})
+
+def project_api(request):
+    projects = Project.objects.all()
+
+    data = []
+
+    for project in projects:
+        data.append({
+            "project_name": project.project_name,
+            "description": project.description,
+            "status": project.status,
+            "start_date": project.start_date.isoformat() if project.start_date else None,
+            "end_date": project.end_date.isoformat() if project.end_date else None,
+            "location": project.location,
+            "budget": str(project.budget) if project.budget else None,
+        })
+
+    return JsonResponse(data, safe=False)
