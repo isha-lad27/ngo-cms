@@ -128,5 +128,18 @@
     "order": 1,
     "status": true
   }
+},
+{
+  "model": "accounts.project",
+  "pk": 1,
+  "fields": {
+    "project_name": "Education Support Program",
+    "description": "A community education initiative providing learning support and educational resources to children from underprivileged communities.",
+    "status": "Ongoing",
+    "start_date": "2026-08-01",
+    "end_date": "2026-12-31",
+    "location": "Mumbai, Maharashtra",
+    "budget": "500000.00"
+  }
 }
 ]
