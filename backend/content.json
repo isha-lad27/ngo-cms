@@ -1,60 +1,59 @@
 [
-{
-  "model": "media.pressrelease",
-  "pk": 1,
-  "fields": {
-    "title": "Community Awareness Program",
-    "description": "Our NGO conducted a community awareness program to support local communities.",
-    "release_date": "2026-08-16",
-    "created_at": "2026-08-16T14:39:23.465Z",
-    "updated_at": "2026-08-16T14:39:23.465Z"
+  {
+    "model": "media.pressrelease",
+    "pk": 1,
+    "fields": {
+      "title": "Community Awareness Program",
+      "description": "Our NGO conducted a community awareness program to support local communities.",
+      "release_date": "2026-08-16",
+      "created_at": "2026-08-16T14:39:23.465Z",
+      "updated_at": "2026-08-16T14:39:23.465Z"
+    }
+  },
+  {
+    "model": "media.mediacoverage",
+    "pk": 1,
+    "fields": {
+      "title": "NGO Featured in Local News",
+      "url": "https://example.com",
+      "created_at": "2026-08-16T14:40:21.577Z",
+      "updated_at": "2026-08-16T14:40:21.577Z"
+    }
+  },
+  {
+    "model": "media.imagegallery",
+    "pk": 2,
+    "fields": {
+      "image": "gallery/WhatsApp_Image_2026-08-16_at_8.20.12_PM_JnVDLRI.jpeg",
+      "description": "Community Awareness Program",
+      "uploaded_at": "2026-08-16T16:34:57.396Z"
+    }
+  },
+  {
+    "model": "media.imagegallery",
+    "pk": 4,
+    "fields": {
+      "image": "gallery/WhatsApp_Image_2026-08-16_at_10.10.05_PM.jpeg",
+      "description": "Education Program",
+      "uploaded_at": "2026-08-16T16:40:57.316Z"
+    }
+  },
+  {
+    "model": "media.imagegallery",
+    "pk": 5,
+    "fields": {
+      "image": "gallery/WhatsApp_Image_2026-08-16_at_10.16.46_PM.jpeg",
+      "description": "Tree Plantation Drive",
+      "uploaded_at": "2026-08-16T16:47:36.899Z"
+    }
+  },
+  {
+    "model": "media.video",
+    "pk": 1,
+    "fields": {
+      "video_url": "https://www.youtube.com/watch?v=ScMzIvxBSi4",
+      "description": "NGO Awareness Campaign Video",
+      "uploaded_at": "2026-08-16T14:44:04.511Z"
+    }
   }
-},
-{
-  "model": "media.mediacoverage",
-  "pk": 1,
-  "fields": {
-    "title": "NGO Featured in Local News",
-    "url": "https://example.com",
-    "created_at": "2026-08-16T14:40:21.577Z",
-    "updated_at": "2026-08-16T14:40:21.577Z"
-  }
-},
-{
-  "model": "media.imagegallery",
-  "pk": 2,
-  "fields": {
-    "image": "gallery/WhatsApp_Image_2026-08-16_at_8.20.12_PM_JnVDLRI.jpeg",
-    "description": "Community Awareness Program",
-    "uploaded_at": "2026-08-16T16:34:57.396Z"
-  }
-},
-{
-  "model": "media.imagegallery",
-  "pk": 4,
-  "fields": {
-    "image": "gallery/WhatsApp_Image_2026-08-16_at_10.10.05_PM.jpeg",
-    "description": "Education Program",
-    "uploaded_at": "2026-08-16T16:40:57.316Z"
-  }
-},
-{
-  "model": "media.imagegallery",
-  "pk": 5,
-  "fields": {
-    "image": "gallery/WhatsApp_Image_2026-08-16_at_10.16.46_PM.jpeg",
-    "description": "Tree Plantation Drive",
-    "uploaded_at": "2026-08-16T16:47:36.899Z"
-  }
-},
-{
-  "model": "media.video",
-  "pk": 1,
-  "fields": {
-    "video_url": "https://www.youtube.com/watch?v=ScMzIvxBSi4",
-    "description": "NGO Awareness Campaign Video",
-    "uploaded_at": "2026-08-16T14:44:04.511Z"
-  }
-}
-]
-
+  ]
