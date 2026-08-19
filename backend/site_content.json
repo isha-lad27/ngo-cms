@@ -1,0 +1,121 @@
+[
+{
+  "model": "aboutus.ourstory",
+  "pk": 1,
+  "fields": {
+    "content": "Our NGO was established with a vision to create positive change in the lives of underprivileged communities. We believe that every individual deserves access to education, healthcare, equal opportunities, and a better future.\r\n\r\nWhat started as a small community initiative has grown into a dedicated organization working to support people in need. Through the commitment of our team, volunteers, and supporters, we continue to create meaningful and lasting social impact.",
+    "created_at": "2026-08-12T14:20:18.024Z",
+    "updated_at": "2026-08-12T14:20:18.025Z"
+  }
+},
+{
+  "model": "aboutus.corevalue",
+  "pk": 1,
+  "fields": {
+    "value": "Integrity",
+    "created_at": "2026-08-12T14:21:22.692Z",
+    "updated_at": "2026-08-12T14:21:22.692Z"
+  }
+},
+{
+  "model": "aboutus.corevalue",
+  "pk": 2,
+  "fields": {
+    "value": "Inclusivity",
+    "created_at": "2026-08-12T14:21:40.619Z",
+    "updated_at": "2026-08-12T14:21:40.619Z"
+  }
+},
+{
+  "model": "aboutus.corevalue",
+  "pk": 3,
+  "fields": {
+    "value": "Empathy",
+    "created_at": "2026-08-12T14:21:46.802Z",
+    "updated_at": "2026-08-12T14:21:46.802Z"
+  }
+},
+{
+  "model": "aboutus.corevalue",
+  "pk": 4,
+  "fields": {
+    "value": "Transparency",
+    "created_at": "2026-08-12T14:21:53.842Z",
+    "updated_at": "2026-08-12T14:21:53.842Z"
+  }
+},
+{
+  "model": "aboutus.program",
+  "pk": 1,
+  "fields": {
+    "name": "Child Education",
+    "description": "Providing educational resources, learning opportunities, and academic support to children from underprivileged communities.",
+    "created_at": "2026-08-12T14:23:23.620Z",
+    "updated_at": "2026-08-12T14:23:23.620Z"
+  }
+},
+{
+  "model": "aboutus.program",
+  "pk": 2,
+  "fields": {
+    "name": "Healthcare Support",
+    "description": "Organizing health awareness activities and supporting access to essential healthcare services for communities in need.",
+    "created_at": "2026-08-12T14:23:37.163Z",
+    "updated_at": "2026-08-12T14:23:37.163Z"
+  }
+},
+{
+  "model": "aboutus.program",
+  "pk": 3,
+  "fields": {
+    "name": "Women Empowerment",
+    "description": "Providing skill development, vocational training, and opportunities that help women become financially independent.",
+    "created_at": "2026-08-12T14:23:52.164Z",
+    "updated_at": "2026-08-12T14:23:52.164Z"
+  }
+},
+{
+  "model": "aboutus.teammember",
+  "pk": 1,
+  "fields": {
+    "name": "Rahul Sharma",
+    "role": "Founder & Director",
+    "image_url": null,
+    "created_at": "2026-08-12T14:24:53.891Z",
+    "updated_at": "2026-08-12T14:24:53.891Z"
+  }
+},
+{
+  "model": "aboutus.teammember",
+  "pk": 2,
+  "fields": {
+    "name": "Priya Patel",
+    "role": "Program Coordinator",
+    "image_url": null,
+    "created_at": "2026-08-12T14:25:15.920Z",
+    "updated_at": "2026-08-12T14:25:15.920Z"
+  }
+},
+{
+  "model": "aboutus.teammember",
+  "pk": 3,
+  "fields": {
+    "name": "Amit Kumar",
+    "role": "Community Outreach Manager",
+    "image_url": null,
+    "created_at": "2026-08-12T14:25:30.830Z",
+    "updated_at": "2026-08-12T14:25:30.830Z"
+  }
+},
+{
+  "model": "home.banner",
+  "pk": 1,
+  "fields": {
+    "image_url": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80",
+    "title": "Empowering Communities",
+    "description": "Together we can create a better future through education, healthcare and social development.",
+    "order": 1,
+    "status": true
+  }
+}
+]
