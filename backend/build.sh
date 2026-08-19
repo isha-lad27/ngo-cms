@@ -4,4 +4,4 @@ set -o errexit
 pip install -r requirements.txt
 python manage.py collectstatic --noinput
 python manage.py migrate
-python manage.py loaddata content.json site_content.json vision_mission.json
+python manage.py loaddata content.json site_content.json vision_mission.json projects_content.json

@@ -1,0 +1,24 @@
+[
+{
+  "model": "accounts.project",
+  "pk": 1,
+  "fields": {
+    "project_name": "Education Support Program",
+    "description": "A community education initiative providing learning support and educational resources to children from underprivileged communities.",
+    "status": "Ongoing",
+    "start_date": "2026-08-01",
+    "end_date": "2026-12-31",
+    "location": "Mumbai, Maharashtra",
+    "budget": "500000.00"
+  }
+},
+{
+  "model": "accounts.projectimage",
+  "pk": 1,
+  "fields": {
+    "project": 1,
+    "image": "projects/WhatsApp_Image_2026-08-14_at_10.49.36_PM.jpeg",
+    "uploaded_at": "2026-08-14T17:20:45.431Z"
+  }
+}
+]
